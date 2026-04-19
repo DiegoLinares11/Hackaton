@@ -1,0 +1,102 @@
+AquaPure Ceramic Filter — Technical Documentation
+
+PRODUCT DESCRIPTION
+AquaPure is a gravity-fed ceramic water filtration system designed to remove bacteria,
+protozoa, and turbidity from contaminated drinking water in low-resource households.
+The system works by pouring source water into the upper chamber, where it passes
+through a silver-impregnated ceramic candle (0.2 micron pore size) into a lower
+storage tank with a tap. No electricity or pressurized water supply is required.
+
+SDG ALIGNMENT
+Primary: SDG 6 (Clean Water and Sanitation), specifically targets 6.1 (universal
+access to safe drinking water) and 6.b (community participation).
+Secondary: SDG 3 (Good Health) — reduces diarrheal disease in children under 5.
+
+PRICE
+Retail price: USD $32 per unit (household size, 20L capacity).
+Subsidized price through NGO partners: USD $18 per unit.
+
+TARGET USERS
+Rural households in Sub-Saharan Africa and South Asia without piped water access.
+Typical household: 5-7 members. Designed for users with low literacy — all
+instructions use pictograms. Also deployed in schools and small clinics.
+
+COMPETITIVE LANDSCAPE
+Direct competitors: LifeStraw Family 2.0 (USD $35), Tulip Siphon Filter (USD $20),
+Nazava (USD $28). AquaPure differentiates through longer candle life (2 years vs.
+1 year) and locally-manufactured ceramic in East Africa.
+
+COUNTRIES / REGIONS
+Currently deployed in Kenya, Uganda, Rwanda, Tanzania, Malawi, and Bangladesh.
+Pilot programs in Nepal and Guatemala (2025).
+
+MANUFACTURING METHOD
+Ceramic candles produced in Nairobi, Kenya using locally-sourced clay and sawdust
+(burnout agent for porosity), fired at 900°C in a tunnel kiln. Plastic housing
+injection-molded by ISO-9001 certified partner in Mombasa. Final assembly and
+QA at the Nairobi facility. Production capacity: 12,000 units/month.
+
+INTELLECTUAL PROPERTY
+Ceramic formulation: trade secret, held by AquaPure Ltd. Housing design: open-source
+under CERN OHL v2. No patents filed. Technical drawings available on GitHub.
+
+USER PROVISION MODEL
+Three channels: (1) Direct sales to households via village-level entrepreneurs (VLEs)
+trained by AquaPure; (2) Bulk sales to NGOs for distribution programs; (3) Government
+procurement for school and clinic programs.
+
+DISTRIBUTIONS TO DATE
+As of Q1 2026: 184,000 units distributed across 6 countries. Estimated users reached:
+1.1 million. Replacement candle sales: 42,000 units (indicator of continued use).
+
+DESIGN SPECIFICATIONS
+Total capacity: 20 liters (2x 10L chambers). Footprint: 30 cm diameter x 55 cm height.
+Weight empty: 3.2 kg. Ceramic candle: 25 cm x 5 cm, 0.2 micron nominal pore size,
+silver-impregnated. Housing: food-grade HDPE. Tap: brass with ceramic valve.
+
+PERFORMANCE PARAMETERS
+Flow rate: 1.5 L/hour at full chamber. Bacteria removal: >99.99% (log 4) for
+E. coli, verified per NSF/ANSI P231. Turbidity removal: reduces 50 NTU input to
+<1 NTU output. Candle lifespan: ~10,000 liters or 24 months.
+
+TECHNICAL SUPPORT
+Village-level entrepreneurs trained in installation, cleaning, and candle
+replacement. 24-month warranty on housing, 12-month on tap. WhatsApp support line
+in English, Swahili, Luganda, and Bengali. User manual in 8 languages.
+
+REPLACEMENT COMPONENTS
+Ceramic candle (USD $8, replace every 24 months). Tap assembly (USD $3, replace
+as needed). Available through the same VLE network.
+
+LIFECYCLE
+Expected housing lifespan: 10 years. Ceramic candle: 2 years or 10,000 L.
+End-of-life: HDPE housing is recyclable; ceramic candle is inert and can be
+crushed for use as aggregate. No hazardous materials.
+
+SAFETY
+No known hazards during normal use. Silver impregnation is below WHO limits
+(<0.1 mg/L leaching). Ceramic is food-grade. Housing contains no BPA. Risk:
+if the candle cracks, filtration is compromised — users are trained to inspect
+monthly. No risk of backflow contamination (air gap design).
+
+ACADEMIC REFERENCES
+- Brown, J. et al. (2008). "Effectiveness of ceramic filtration for drinking
+  water treatment in Cambodia." Journal of Water and Health 6(1): 1-10.
+- Clasen, T. et al. (2004). "Household water treatment in poor populations:
+  is there enough evidence?" Environmental Science & Technology 38(20).
+- WHO (2019). "Results of Round II of the WHO International Scheme to Evaluate
+  Household Water Treatment Technologies."
+
+REGULATORY COMPLIANCE
+- NSF/ANSI P231 (microbiological water purifiers) — certified 2021.
+- WHO Household Water Treatment Performance — 2-star rating (bacteria).
+- Kenya Bureau of Standards KS ISO 24510 — compliant.
+- ISO 9001:2015 (quality management) — AquaPure Ltd.
+
+EVALUATION METHODS
+Laboratory testing: NSF/ANSI P231 protocol at accredited lab (SGS, Nairobi),
+Q3 2021. Field evaluation: 18-month randomized controlled trial with 600
+households in Kisumu, Kenya (2022-2023) in partnership with LSHTM. Outcomes
+measured: diarrheal incidence (reduced 38%, p<0.01), candle lifespan under
+field conditions, user compliance. Ongoing: continuous monitoring via VLE
+reports and biannual household surveys.

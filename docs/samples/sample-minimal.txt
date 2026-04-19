@@ -1,0 +1,8 @@
+EcoLamp — Early-stage prototype
+
+We are developing a portable LED lamp for rural households. It uses a small
+solar panel to charge during the day and provides light at night. We believe
+this product will help many families in developing countries. We are looking
+for funding to take it to market.
+
+Contact us for more information.
