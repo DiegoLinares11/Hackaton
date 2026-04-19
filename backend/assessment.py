@@ -1,6 +1,6 @@
 """
 Assessment engine: analyzes extracted text against E4C criteria.
-Uses KnowledgeXpert or Claude API to evaluate each field.
+Supports KnowledgeXpert, Anthropic Claude, OpenAI, and demo/keyword fallback.
 """
 
 import json
@@ -12,9 +12,12 @@ from criteria import CRITERIA, get_all_fields, get_field_info
 KNOWLEDGEXPERT_API_URL = os.getenv("KNOWLEDGEXPERT_API_URL", "")
 KNOWLEDGEXPERT_API_KEY = os.getenv("KNOWLEDGEXPERT_API_KEY", "")
 
-# Fallback: use Anthropic API if KnowledgeXpert is not configured
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+
 USE_ANTHROPIC = bool(ANTHROPIC_API_KEY) and not bool(KNOWLEDGEXPERT_API_KEY)
+USE_OPENAI = bool(OPENAI_API_KEY) and not USE_ANTHROPIC and not bool(KNOWLEDGEXPERT_API_KEY)
 
 
 SYSTEM_PROMPT = """You are an E4C Solutions Library readiness assessment assistant. 
@@ -70,13 +73,41 @@ Respond with a JSON object where keys are the field names listed above. Example:
 
 Respond ONLY with the JSON object. No markdown backticks, no preamble."""
 
-    if USE_ANTHROPIC:
-        return await _evaluate_with_anthropic(user_prompt)
-    elif KNOWLEDGEXPERT_API_KEY:
+    if KNOWLEDGEXPERT_API_KEY:
         return await _evaluate_with_knowledgexpert(user_prompt)
+    elif USE_ANTHROPIC:
+        return await _evaluate_with_anthropic(user_prompt)
+    elif USE_OPENAI:
+        return await _evaluate_with_openai(user_prompt)
     else:
-        # Demo mode: return mock assessment
         return _generate_demo_assessment(text)
+
+
+async def _evaluate_with_openai(user_prompt: str) -> dict:
+    """Use OpenAI chat completions API for evaluation."""
+    async with httpx.AsyncClient(timeout=120.0) as client:
+        response = await client.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": OPENAI_MODEL,
+                "temperature": 0.1,
+                "response_format": {"type": "json_object"},
+                "messages": [
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": user_prompt},
+                ],
+            },
+        )
+        data = response.json()
+        text = data["choices"][0]["message"]["content"].strip()
+        if text.startswith("```"):
+            text = text.split("\n", 1)[1]
+            text = text.rsplit("```", 1)[0]
+        return json.loads(text)
 
 
 async def _evaluate_with_anthropic(user_prompt: str) -> dict:
